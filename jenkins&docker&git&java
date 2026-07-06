@@ -2,6 +2,11 @@ yum install git -y
 git --version
 dnf install java-21-amazon-corretto -y
 java -version
+yum install docker -y
+systemctl enable docker
+systemctl start docker
+systemctl status docker
+docker --version
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 wget -O /etc/yum.repos.d/jenkins.repo \
 https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -9,8 +14,4 @@ yum install jenkins -y
 systemctl enable jenkins
 systemctl start jenkins
 systemctl status jenkins
-yum install docker -y
-systemctl enable docker
-systemctl start docker
-systemctl status docker
-docker --version
+
