@@ -1,0 +1,9 @@
+eksctl create cluster \
+--name ecommerce-cluster \
+--region ap-south-1 \
+--nodegroup-name workers \
+--node-type t3.medium \
+--nodes 2 \
+--nodes-min 2 \
+--nodes-max 3 \
+--managed
